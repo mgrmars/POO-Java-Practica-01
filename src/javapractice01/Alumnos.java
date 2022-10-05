@@ -1,5 +1,9 @@
 package javapractice01;
 
+/**
+ *
+ * @author Miguel Gonzales
+ */
 public class Alumnos {
 
     private String nombre;
@@ -26,11 +30,13 @@ public class Alumnos {
         return nombre;
     }
 
+    // "debe tener al menos 3 letras".
     public void setNombre(String nombre) {
-        if (nombre.length() > 3) {
+        if (nombre.length() >= 3) {
             this.nombre = nombre;
         } else {
-            throw new Error("\"nombre\" tiene que tener mas de 3 caracteres");
+            // Muestra un error en la consola.
+            throw new Error("\"nombre\" tiene que tener 3 o mas caracteres");
         }
     }
 
@@ -39,10 +45,10 @@ public class Alumnos {
     }
 
     public void setApellidoMaterno(String apellidoMaterno) {
-        if (apellidoMaterno.length() > 3) {
+        if (apellidoMaterno.length() >= 3) {
             this.apellidoMaterno = apellidoMaterno;
         } else {
-            throw new Error("\"apellidoMaterno\" tiene que tener mas de 3 caracteres");
+            throw new Error("\"apellidoMaterno\" tiene que tener 3 o mas caracteres");
         }
     }
 
@@ -51,10 +57,10 @@ public class Alumnos {
     }
 
     public void setApellidoPaterno(String apellidoPaterno) {
-        if (apellidoPaterno.length() > 3) {
+        if (apellidoPaterno.length() >= 3) {
             this.apellidoPaterno = apellidoPaterno;
         } else {
-            throw new Error("\"apellidoPaterno\" tiene que tener mas de 3 caracteres");
+            throw new Error("\"apellidoPaterno\" tiene que tener 3 o mas caracteres");
         }
     }
 
@@ -62,6 +68,7 @@ public class Alumnos {
         return edad;
     }
 
+    // "no puede ser un número negativo ni menor a 15"
     public void setEdad(int edad) {
         if (edad >= 15) {
             this.edad = edad;
@@ -74,6 +81,7 @@ public class Alumnos {
         return ciclo;
     }
 
+    // "del  1 al 10"
     public void setCiclo(int ciclo) {
         if (ciclo >= 1 && ciclo <= 10) {
             this.ciclo = ciclo;
